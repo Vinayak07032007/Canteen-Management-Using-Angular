@@ -205,7 +205,7 @@ If using a dev proxy, ensure `frontend/proxy.conf.json` proxies `/api` to `http:
 
 **Developer:** Vinayak Sonawane
 
-**Email:** [vinayaksonwane377@gmail.com]
+**Email:** vinayaksonwane377@gmail.com
 
 **GitHub:** Vinayak07032007
 
