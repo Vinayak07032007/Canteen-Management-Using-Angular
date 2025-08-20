@@ -1,0 +1,147 @@
+/* Background */
+body {
+    background-color: #DBE4C9;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Card */
+  .card {
+    background: #FFFFF0;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Headings */
+  .card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+    color: #8AA624;
+  }
+  
+  /* Menu Grid */
+  .grid.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+  }
+  
+  .menu-card {
+    background: white;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  .menu-card:hover {
+    background: #fdfdf5;
+    border-color: #8AA624;
+  }
+  
+  .menu-card h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .price {
+    font-size: 1rem;
+    color: #FEA405;
+    margin-bottom: 10px;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  
+  .btn.primary {
+    background: #8AA624;
+    color: white;
+  }
+  
+  .btn.primary:hover {
+    background: #6f881c;
+  }
+  
+  .btn.secondary {
+    background: #FEA405;
+    color: white;
+  }
+  
+  .btn.secondary:hover {
+    background: #d57d00;
+  }
+  
+  /* Forms */
+  input, select {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+  }
+  
+  input:focus, select:focus {
+    border-color: #8AA624;
+    box-shadow: 0 0 5px rgba(138,166,36,0.4);
+  }
+  
+  /* Inline form */
+  .form-inline {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  /* Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  table th {
+    background: #8AA624;
+    color: white;
+    text-align: left;
+  }
+  
+  table tr:nth-child(even) {
+    background: #f8fbe9;
+  }
+  
+  .total {
+    font-size: 1.1rem;
+    color: #8AA624;
+    margin: 12px 0;
+  }
+  

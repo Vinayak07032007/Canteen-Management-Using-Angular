@@ -1,0 +1,66 @@
+<div class="container">
+    <!-- Add Menu Item -->
+    <div class="card">
+      <h2>Add New Menu Item</h2>
+      <form (ngSubmit)="addMenu()" class="form-inline">
+        <input [(ngModel)]="newItem.name" name="name" placeholder="Item Name" required />
+        <input [(ngModel)]="newItem.price" type="number" name="price" placeholder="Price" min="1" step="0.01" required />
+        <button class="btn primary" type="submit">Add Item</button>
+      </form>
+    </div>
+  
+    <!-- Menu -->
+    <div class="card">
+      <h2>Today's Menu</h2>
+      <div class="grid menu">
+        <div class="menu-card" *ngFor="let item of menu()">
+          <h3>{{ item.name }}</h3>
+          <div class="price">₹{{ item.price }}</div>
+          <button class="btn secondary" (click)="addToOrder(item)">Add</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Current Order -->
+    <div class="card">
+      <h2>Current Order</h2>
+      <div *ngFor="let i of currentOrder()">{{ i.itemName }} x{{ i.quantity }}</div>
+      <p class="total"><b>Total:</b> ₹{{ total() | number:'1.2-2' }}</p>
+      <form (ngSubmit)="placeOrder()" class="form-inline">
+        <input [(ngModel)]="customerName" name="userName" placeholder="Customer Name" required />
+        <select [(ngModel)]="tableNumber" name="tableNumber" required>
+          <option value="" disabled>Select Table</option>
+          <option *ngFor="let t of tables" [value]="t">Table {{ t }}</option>
+        </select>
+        <button class="btn primary" type="submit">Place Order</button>
+      </form>
+    </div>
+  
+    <!-- Orders -->
+    <div class="card">
+      <h2>Order History</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Table</th>
+            <th>Items</th>
+            <th>Total</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let o of orders()">
+            <td>{{ o.id }}</td>
+            <td>{{ o.userName }}</td>
+            <td>{{ o.tableNumber }}</td>
+            <td>{{ o.itemName }} x{{ o.quantity }}</td>
+            <td>₹{{ o.total }}</td>
+            <td>{{ o.orderTime }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
